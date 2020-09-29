@@ -1,3 +1,12 @@
+// --== CS400 File Header Information ==--
+// Name: Larry Goldman
+// Email: ldgoldman@wisc.edu
+// Team: FD
+// Role: Back End Developer
+// TA: Abhay
+// Lecturer: Florian
+// Notes to Grader: Back End 
+
 import java.util.NoSuchElementException;
 
 /**
