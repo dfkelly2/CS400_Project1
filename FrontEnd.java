@@ -159,6 +159,8 @@ public class FrontEnd {
     percentF = scnr.nextDouble();
 
     course = new AcademicClass(classCode, gpa, percentA, percentF);
+    
+    map.add(classCode, course);
 
     System.out.println("Added class" + classCode);
     System.out.println("Enter another command");
