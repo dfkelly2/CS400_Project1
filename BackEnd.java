@@ -53,7 +53,7 @@ public class BackEnd {
 	 * @return the academic class with the specified key
 	 * @throws NoSuchElementException if the key does not exist
 	 */
-  public AcademicClass get(String key) throws NoSuchElementException{
+  public Object get(String key) throws NoSuchElementException{
     return map.get(key);
   }
 
@@ -79,7 +79,7 @@ public class BackEnd {
 	 * 
 	 * @return the AcademicClass that was removed
 	 */
-	public AcademicClass remove(String key) {
+	public Object remove(String key) {
 		return map.remove(key);
 	}
 
@@ -90,5 +90,18 @@ public class BackEnd {
 		map.clear();
 		this.size = 0;
 	}
-}
-   
+	
+	/*
+	 * Returns the hash table map
+	 */
+	public HashTableMap<String, AcademicClass> getMap() {
+		return this.map;
+	}
+	
+	/*
+	 * Sets the hash table map
+	 */
+	public void setMap(HashTableMap<String, AcademicClass> table) {
+		this.map = table;
+	}
+}  

@@ -11,10 +11,9 @@ import java.util.Scanner;
 
 public class FrontEnd {
 
-  private static HashTableMap map = new HashTableMap();
-
+  private static BackEnd back = new BackEnd();
   public static HashTableMap getMap(){
-    return map;
+    return back.getMap();
   }
   /**
    * This is a helper method to print out a divider of 25 "-"
@@ -77,7 +76,7 @@ public class FrontEnd {
       i++;
 
     }
-    map = classList;
+    back.setMap(classList); 
   }
 
   public static  void main(String[] args) {
@@ -159,10 +158,11 @@ public class FrontEnd {
     percentF = scnr.nextDouble();
 
     course = new AcademicClass(classCode, gpa, percentA, percentF);
-    
-    map.add(classCode, course);
 
-    System.out.println("Added class" + classCode);
+    System.out.println("Added class " + classCode);
+    
+    back.put(classCode, course);
+    
     System.out.println("Enter another command");
   }
   /**
@@ -187,7 +187,7 @@ public class FrontEnd {
         return;
       }
 
-      if (!map.containsKey(classCode)) { //check if the class is in the table
+      if (!back.containsKey(classCode)) { //check if the class is in the table
         System.out.println("Class \"" + classCode + "\" either does not exist or there is not data for it");
         System.out.println("Enter another class code or \"e\" to exit search");
         continue;
@@ -198,7 +198,7 @@ public class FrontEnd {
 
     // run a "get" command on our table
 
-    course = (AcademicClass)map.get(classCode);
+    course = (AcademicClass)back.get(classCode);
 
     // get the data from whatever is returned in whatever form
     printDivider();
