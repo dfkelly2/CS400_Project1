@@ -42,7 +42,7 @@ public class AcademicClass{
     /**
     * getter method for percent of students who failed the academic class
     */
-    public double getPercentF() {
+    public double percentF() {
         return this.percentF;
     }
 
