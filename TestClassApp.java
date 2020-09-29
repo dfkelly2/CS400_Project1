@@ -146,7 +146,7 @@ public class TestClassApp {
     classes.put("CS300", new AcademicClass("CS300", 2.5, 90, 10));
     classes.put("CS354", new AcademicClass("CS354", 2.5, 90, 10));
 
-    AcademicClass CS200 = classes.get("CS200");
+    AcademicClass CS200 = (AcademicClass) classes.get("CS200");
 
     if(!CS200.getClassName().equals("Cs200") && CS200.getAvgGPA() != 2.5 && CS200.getPercentA() != 90){
       return false;
