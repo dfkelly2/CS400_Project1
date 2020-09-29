@@ -112,6 +112,7 @@ public class FrontEnd {
             } catch (FileNotFoundException e){
               System.out.println("File not found!");
             }
+            System.out.println("Enter another command");
             break;
           case "q":
             quit = true;
