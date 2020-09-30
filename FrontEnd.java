@@ -147,6 +147,7 @@ public class FrontEnd {
 
     System.out.println("Enter the class code. EX: CS400 or ECE353");
     classCode = scnr.nextLine();
+    classCode = classCode.toUpperCase();
 
     System.out.println("Enter average GPA. EX: 3.10");
     gpa = scnr.nextDouble();
@@ -182,7 +183,8 @@ public class FrontEnd {
         // wait for the user to input a class code
       }
       classCode = scnr.next(); //check if the use wanted to exit the search
-      if (classCode.equals("e")) {
+      classCode = classCode.toUpperCase();
+      if (classCode.equals("E")) {
         System.out.println("Enter another command");
         return;
       }
